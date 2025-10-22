@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="be">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВаджыЦыфры - Гульня ўгадай лічбу</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🎯 ВаджыЦыфры</h1>
+            <p class="subtitle">Адгадай лічбу ад 1 да 100 за 10 спробаў!</p>
+        </header>
+
+        <main class="game-container">
+            <div class="game-info">
+                <div class="info-card">
+                    <span class="info-label">Спробы:</span>
+                    <span id="attempts-left" class="info-value">10</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Папярэднія:</span>
+                    <span id="previous-guesses" class="info-value">-</span>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div class="input-section">
+                    <label for="guess-input" class="input-label">Ваша здагадка:</label>
+                    <div class="input-group">
+                        <input 
+                            type="number" 
+                            id="guess-input" 
+                            class="guess-input" 
+                            min="1" 
+                            max="100" 
+                            placeholder="Увядзіце лічбу"
+                            autocomplete="off"
+                        >
+                        <button id="submit-btn" class="submit-btn">Праверыць</button>
+                    </div>
+                </div>
+
+                <div id="result-area" class="result-area">
+                    <p id="result-message" class="result-message">Пачніце гульню! Увядзіце вашу першую здагадку.</p>
+                    <p id="hint-message" class="hint-message"></p>
+                </div>
+
+                <div id="game-over" class="game-over hidden">
+                    <h2 id="game-over-title" class="game-over-title"></h2>
+                    <p id="game-over-message" class="game-over-message"></p>
+                    <button id="restart-btn" class="restart-btn">🔄 Запусціць нанова</button>
+                </div>
+            </div>
+
+            <div class="rules-section">
+                <h3>📋 Правілы гульні:</h3>
+                <ul class="rules-list">
+                    <li>Кампутар загадаў лічбу ад 1 да 100</li>
+                    <li>У вас ёсць 10 спробаў для адгадывання</li>
+                    <li>Пасля кожнай здагадкі вы атрымаеце падказку</li>
+                    <li>Паспрабуйце адгадаць за найменшую колькасць спробаў!</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Зроблена з ❤️ для беларускіх гульцоў</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
